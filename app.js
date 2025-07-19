@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.set('view engine','ejs');
 app.set('views','./views');
@@ -39,7 +40,7 @@ app.post('/new',(req,res)=>{
     res.redirect('/');
 })
 
-app.listen(3000,()=>{
+app.listen(PORT,()=>{
     console.log('Server running at http://localhost:3000')
 });
 
